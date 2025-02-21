@@ -1,0 +1,16 @@
+name: Afficher Bonjour Vlad lors d'une Pull Request
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Afficher le message
+        run: echo "Bonjour Vlad  ! Une nouvelle Pull Request a été créée."
